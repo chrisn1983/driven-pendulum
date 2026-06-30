@@ -1,0 +1,29 @@
+[project]
+name = "driven-pendulum"
+version = "0.1.0"
+description = "Simulation and analysis of a damped pendulum with a horizontally driven pivot"
+readme = "README.md"
+authors = [
+    { name = "Chris Norman", email = "cpnengineering1983@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.0",
+    "numpy>=2.5.0",
+    "pandas>=3.0.3",
+    "pillow>=12.2.0",
+    "scipy>=1.18.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.25,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

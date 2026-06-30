@@ -1,0 +1,14 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Generated raw data (figures in outputs/ are committed so the README renders;
+# CSVs are large and regenerable via the scripts, so they are ignored).
+outputs/*.csv
