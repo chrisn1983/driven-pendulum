@@ -39,6 +39,9 @@ uv sync
 
 That creates a `.venv` and installs everything pinned in `uv.lock`.
 
+> **New to the project or `uv`?** See **[docs/USAGE.md](docs/USAGE.md)** for a step-by-step guide:
+> installing `uv`, getting the code, running every script, and running your own experiments.
+
 ## Usage
 
 ### As a library
@@ -85,6 +88,21 @@ uv run python scripts/run_sensitivity.py     # divergence of nearby trajectories
 uv run python scripts/run_animation.py       # animated GIF
 uv run python scripts/run_all.py             # everything
 ```
+
+### Custom runs
+
+To experiment with your own parameters, use [scripts/run_custom.py](scripts/run_custom.py). It runs
+one simulation, prints a summary, saves figures + CSV, and can display the plots with `--show`:
+
+```bash
+# Pick your own amplitude/frequency, run for 60 s, and open the plots
+uv run python scripts/run_custom.py --A 1.3 --omega 2.7 --t 60 --show
+
+# Or let it choose random drive parameters for you
+uv run python scripts/run_custom.py --random --t 60 --show
+```
+
+See [docs/USAGE.md](docs/USAGE.md) for the full flag reference and more examples.
 
 ## What the system does
 

@@ -12,3 +12,6 @@ wheels/
 # Generated raw data (figures in outputs/ are committed so the README renders;
 # CSVs are large and regenerable via the scripts, so they are ignored).
 outputs/*.csv
+
+# Ad-hoc experiment outputs from scripts/run_custom.py (personal scratch runs).
+outputs/custom*
